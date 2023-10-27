@@ -51,7 +51,6 @@ app.listen(port, () => {
 Command to launch the application
 ```
 $ /usr/src/app# node index.js
-Rodando na porta: 3000
 ```
 
 ## Result
