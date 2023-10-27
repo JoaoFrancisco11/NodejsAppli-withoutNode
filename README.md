@@ -26,25 +26,25 @@ After setting up the project, including the installation of Express.js and its d
 ## JS
 The following JavaScript code has been developed for testing
 ```rb
-# Importa o módulo Express
+# Import the Express module
 const express = require('express')
 
-# Cria a instância do aplicativo Express
+# Create an instance of the Express application
 const app = express()
 
-# Define a porta na qual o servidor será executado
+# Define the port on which the server will run
 const port = 3000
 
-# Configurando a rota para lidar com solicitações na raiz do servidor
+# Setting up the route to handle requests at the root of the server
 app.get('/', (req, res) => {
-    # Resposta usando um cabeçalho HTML simples
-    res.send('<h1>Teste</h1>')
+    # Respond with a simple HTML header
+    res.send('<h1>Test</h1>')
 })
 
-# Inicia o servidor na porta 3000
+# Start the server on port 3000
 app.listen(port, () => {
-    # Exibe a mensagem no console quando o servidor estiver rodando
-    console.log('Rodando na porta: ' + port)
+    # Display the message in the console when the server is running
+    console.log('Running on port: ' + port)
 })
 ```
 
