@@ -59,3 +59,27 @@ $ /usr/src/app# node index.js
   <img src="https://github.com/JoaoFrancisco11/NodejsAppli-withoutNode/blob/main/Result.png" alt="Texto Alternativo">
 </p>
 
+## Dockerfile
+If you need to share the created image with someone, simply create a Dockerfile and push the created image to Docker Hub
+```rb
+# Node.js 15 base image
+FROM node:15
+
+# Setting the working directory inside the container
+WORKDIR /usr/src/app
+
+# Copying all files and directories from the current directory to the container's working directory
+COPY . .
+
+# Exposing port 3000
+EXPOSE 3000
+
+# Defining the command to start the application when the container is executed
+CMD [ "node", "index.js" ]
+```
+
+Building the Dockerfile
+```
+$ docker build -t nome-do-build-escolhido pasta-do-dockerfile
+$ docker run -p 3000:3000 --name nome-do-container nome-build-escolhido
+```
